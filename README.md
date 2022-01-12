@@ -4,8 +4,7 @@ Explores Angular default and custom pipes and [PrimeNG UI](https://primefaces.or
 
 ## Captures
 ![alt text](Capture.JPG)
-![alt text](Capture4.JPG)
 ![alt text](Capture2.JPG)
 ![alt text](Capture3.JPG)
-![alt text](Capture5.JPG)
+![alt text](Capture4.JPG)
 
