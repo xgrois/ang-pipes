@@ -9,9 +9,6 @@ import { Hero, HeroColor } from '../../interfaces/sales.interfaces';
 })
 export class SortingPageComponent implements OnInit {
 
-  word: string = 'caca';
-  useUpper: boolean = true;
-
   heroes: Hero[] = [
     {name: 'Superman', fly: true, color: HeroColor.red},
     {name: 'Batman', fly: false, color: HeroColor.black},
@@ -32,10 +29,6 @@ export class SortingPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-  }
-
-  changeUpper() {
-    this.useUpper = !this.useUpper;
   }
 
   changeOrderBy(orderBy: string) {

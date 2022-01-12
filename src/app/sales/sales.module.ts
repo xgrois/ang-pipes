@@ -9,7 +9,6 @@ import { NumbersPageComponent } from './pages/numbers-page/numbers-page.componen
 import { NoCommonsPageComponent } from './pages/no-commons-page/no-commons-page.component';
 import { BasicsPageComponent } from './pages/basics-page/basics-page.component';
 import { SortingPageComponent } from './pages/sorting-page/sorting-page.component';
-import { MyUpperPipe } from './pipes/myuppercase.pipe';
 import { FlyPipe } from './pipes/fly.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 
@@ -22,7 +21,6 @@ import { SortPipe } from './pipes/sort.pipe';
     NoCommonsPageComponent,
     BasicsPageComponent,
     SortingPageComponent,
-    MyUpperPipe,
     FlyPipe,
     SortPipe
   ],
