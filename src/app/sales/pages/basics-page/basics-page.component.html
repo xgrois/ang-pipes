@@ -1,0 +1,67 @@
+<div class="our-text-layout">
+    <h1>Basic Pipes for Text</h1>
+    <p>Included in CommonModule</p>
+</div>
+<div class="grid">
+    <div class="col">
+        <p-card header="... | uppercase"
+                [subheader]="nameUpper">
+            {{nameUpper|uppercase}}
+        </p-card>
+    </div>
+    <div class="col">
+        <p-card header="... | lowercase"
+                [subheader]="nameLower">
+            {{nameLower|uppercase}}
+        </p-card>
+    </div>
+    <div class="col">
+        <p-card header="... | titlecase"
+                [subheader]="fullName">
+            {{fullName|titlecase}}
+        </p-card>
+    </div>
+</div>
+
+<hr>
+
+<div class="our-text-layout">
+    <h1>Basic Pipes for Dates</h1>
+    <p>Included in CommonModule</p>
+</div>
+<div class="grid">
+    <div class="col">
+        <p-card header="value_expression | date [ : format [ : timezone [ : locale ] ] ]">
+            <ul>
+                <li>todaysDate</li>
+                <li>todaysDate | date</li>
+                <li>todaysDate | date:'short'</li>
+                <li>todaysDate | date:'long'</li>
+                <li>todaysDate | date:'h:mm a z'</li>
+                <li>todaysDate | date:'cccc, dd \'de\' MMMM, yyyy @h:mm O'</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>todaysDate|date:'long':'GMT'</li>
+                <li>todaysDate|date:'long':'GMT':'fr'</li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="col">
+        <p-card header="value_expression | date [ : format [ : timezone [ : locale ] ] ]">
+                <ul>
+                    <li>{{todaysDate}}</li>
+                    <li>{{todaysDate|date}}</li>
+                    <li>{{todaysDate|date:'short'}}</li>
+                    <li>{{todaysDate|date:'long'}}</li>
+                    <li>{{todaysDate|date:'h:mm a z'}}</li>
+                    <li>{{todaysDate|date:'cccc, dd \'de\' MMMM, yyyy @h:mm O'}}</li>
+                </ul>
+                <hr>
+                <ul>
+                    <li>{{todaysDate|date:'long':'GMT'}} (Canarias)</li>
+                    <li>{{todaysDate|date:'long':'GMT':'fr'}} (Canarias)</li>
+                </ul>
+        </p-card>
+    </div>
+</div>

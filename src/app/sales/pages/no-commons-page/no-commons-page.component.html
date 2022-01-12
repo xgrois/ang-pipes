@@ -1,0 +1,118 @@
+<div class="our-text-layout">
+    <h2>Basic Pipes for automatic selection in generated text</h2>
+</div>
+
+
+<div class="grid">
+    <div class="col md-6">
+        <p-fieldset legend="i18nSelect" [toggleable]="true" [collapsed]="true">
+            <p>I met {{names[selector]}}, {{genres[selector]|i18nSelect:genreMap}} is awesome!</p>
+            <button pButton type="button" label="Change" icon="pi pi-refresh" iconPos="right"
+                class="p-button p-button-help" (click)="changei18nSelect()">
+            </button>
+        </p-fieldset>
+    </div>
+    <div class="col md-6">
+        <p-fieldset legend="i18nPlural" [toggleable]="true" [collapsed]="true">
+            <p>System has {{clientQueues[selector2].length|i18nPlural:clientMap}} waiting...</p>
+            <button pButton type="button" label="Change" icon="pi pi-refresh" iconPos="right"
+                class="p-button p-button-help" (click)="changei18nPlural()">
+            </button>
+        </p-fieldset>
+    </div>
+</div>
+
+<hr>
+
+<div class="our-text-layout">
+    <h2>Basic Pipes for slicing</h2>
+</div>
+
+<div class="grid">
+    <div class="col md-6">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true" [collapsed]="true">
+            <b>Original</b>
+            <pre>{{clientQueueN}}</pre>
+
+            <b>slice:0:2</b>
+            <pre>{{clientQueueN | slice:0:2}}</pre>
+        </p-fieldset>
+    </div>
+    <div class="col md-6">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true" [collapsed]="true">
+            <b>Original</b>
+            <pre>{{phrase}}</pre>
+
+            <b>slice:8:20</b>
+            <pre>{{phrase | slice:8:20}}</pre>
+        </p-fieldset>
+    </div>
+</div>
+
+<hr>
+
+<div class="our-text-layout">
+    <h2>Basic Pipes for enumerating object properties as Key-Val pairs</h2>
+</div>
+
+<div class="grid">
+    <div class="col md-6">
+        <p-fieldset legend="KeyValue Pipe" [toggleable]="true" [collapsed]="true">
+            <b>Show key-value objects</b>
+            <pre *ngFor="let property of person | keyvalue">{{property.key}}: {{property.value}}</pre>
+        </p-fieldset>
+    </div>
+</div>
+
+<hr>
+
+<div class="our-text-layout">
+    <h2>Basic Pipes for showing object properties as JSON</h2>
+</div>
+
+<div class="grid">
+    <div class="col md-6">
+        <p-fieldset legend="JSON Pipe" [toggleable]="true" [collapsed]="true">
+            <b>Show key-value objects</b>
+            <pre>{{person|json}}</pre>
+        </p-fieldset>
+    </div>
+</div>
+
+<hr>
+
+<div class="our-text-layout">
+    <h2>Basic Pipes for async</h2>
+</div>
+
+<div class="grid">
+    <div class="col md-6">
+        <p-fieldset legend="Async Pipe" [toggleable]="true" [collapsed]="true">
+            <b>myObservable = interval(5);</b>
+            <pre>{{myObservable|async}}</pre>
+        </p-fieldset>
+    </div>
+    <div class="col md-6">
+        <p-fieldset legend="Async Pipe" [toggleable]="true" [collapsed]="true">
+
+            <p-panel header="Code behind:" class="m-2">
+                <pre>
+                    <code style="font-size: xx-small;">{{tsCode}}</code>
+                </pre>
+
+            </p-panel>
+
+
+            <p-panel header="HTML:" class="m-2">
+                <pre>
+                    <code>{{htmlCode}}</code>
+                </pre>
+            </p-panel>
+            <p-panel header="Output (will appear after 5 seconds):">
+                <pre *ngIf="!(myPromise|async)">Waiting {{myCountdownObservable|async}}</pre>
+                <pre>{{myPromise|async}}</pre>
+            </p-panel>
+
+        </p-fieldset>
+    </div>
+</div>

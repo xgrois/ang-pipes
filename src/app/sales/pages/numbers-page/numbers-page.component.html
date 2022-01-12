@@ -1,0 +1,79 @@
+<div class="our-text-layout">
+    <h1>Basic Pipes for Numbers, Currencies and Percentages</h1>
+    <p>Included in CommonModule</p>
+</div>
+
+<div class="our-text-layout">
+    <h2>Basic Pipes for Numbers</h2>
+</div>
+
+<div class="grid">
+    <div class="col-12 md:col-6 lg:col-3">
+        <p-card header="... | number"
+                [subheader]="netSales.toString()">
+            {{netSales|number}}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+        <p-card header="... | number:'1.2-2'"
+                [subheader]="netSales.toString()">
+            {{netSales|number:'1.2-2'}}
+        </p-card>
+    </div>
+</div>
+
+<hr>
+
+<div class="our-text-layout">
+    <h2>Basic Pipes for Currencies</h2>
+</div>
+
+
+<div class="grid">
+    <div class="col-12 md:col-6 lg:col-3">
+        <p-card header="... | currency"
+                [subheader]="netSales.toString()">
+            {{netSales|currency}}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+        <p-card header="... | currency:'EUR'"
+                [subheader]="netSales.toString()">
+            {{netSales|currency:'EUR'}}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+        <p-card header="... | currency:'EUR':'symbol-narrow'"
+                [subheader]="netSales.toString()">
+            {{netSales|currency:'EUR':'symbol-narrow'}}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+        <p-card header="... | currency:'EUR':'symbol':'1.4-4'"
+                [subheader]="netSales.toString()">
+            {{netSales|currency:'EUR':'symbol-narrow':'1.4-4'}}
+        </p-card>
+    </div>
+</div>
+
+<hr>
+
+<div class="our-text-layout">
+    <h2>Basic Pipes for Percentages</h2>
+</div>
+
+
+<div class="grid">
+    <div class="col-12 md:col-6 lg:col-3">
+        <p-card header="... | percent"
+                [subheader]="per.toString()">
+            {{per|percent}}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+        <p-card header="... | percent:'1.2-2'"
+                [subheader]="per.toString()">
+            {{per|percent:'1.2-2'}}
+        </p-card>
+    </div>
+</div>
